@@ -136,8 +136,6 @@ for (const required of [
   "src/components/Studio.tsx",
   "src/components/Studio.module.css",
   "src/app/api/generate/image/route.ts",
-  "src/app/api/generate/video/start/route.ts",
-  "src/app/api/generate/video/status/route.ts",
   ".env.example",
 ]) {
   if (

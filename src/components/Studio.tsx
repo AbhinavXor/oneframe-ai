@@ -12,6 +12,7 @@ import {
   type DragEvent,
 } from "react";
 import styles from "./Studio.module.css";
+import LibraryPanel from "./LibraryPanel";
 
 type View = "create" | "library";
 
@@ -83,23 +84,6 @@ function NavIcon({
     );
   }
 
-  if (type === "motion") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="4" y="5" width="16" height="14" rx="2" />
-        <path d="m10 9 5 3-5 3z" />
-      </svg>
-    );
-  }
-
-  if (type === "avatar") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="9" r="3.2" />
-        <path d="M6.5 19c.8-3.1 2.7-4.7 5.5-4.7s4.7 1.6 5.5 4.7" />
-      </svg>
-    );
-  }
 
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -454,11 +438,6 @@ export default function Studio() {
   }
 
 
-  function avatarGenerate() {
-    setAvatarError(
-      "The Avatar interface is ready. The avatar generation engine still needs to be connected before a real avatar can be generated."
-    );
-  }
 
   return (
     <div className={styles.app}>

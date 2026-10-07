@@ -16,4 +16,3 @@ export function selectImageRoute(
       "Identity-reference image generation route.",
   };
 }
-
