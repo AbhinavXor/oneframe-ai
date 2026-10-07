@@ -1,5 +1,5 @@
 {
-  "name": "visual-ai-studio",
+  "name": "oneframe-ai",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,11 @@
     "lint": "eslint",
     "verify:repo": "node scripts/verify-repo.mjs",
     "typecheck": "tsc --noEmit",
-    "check": "npm run verify:repo && npm run clean:next && npm run build && npm run typecheck && npm run lint",
+    "check": "npm run verify:repo && npm run verify:image && npm run clean:next && npm run build && npm run typecheck && npm run lint",
     "phase1": "npm run check",
-    "clean:next": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\""
+    "clean:next": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\"",
+    "verify:image": "node scripts/verify-image.mjs",
+    "ci": "npm run check"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",
